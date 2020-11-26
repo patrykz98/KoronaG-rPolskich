@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/backgroundWave"
+        android:layout_width="506dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="364dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wave_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/ivMainImage"
+        android:layout_width="212dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mountain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="97dp"
+        android:fontFamily="@font/marvel_bold"
+        android:lineSpacingExtra="4dp"
+        android:text="Korona Gór Polskich"
+        android:textAlignment="center"
+        android:textColor="#4a4a4a"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundWave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMainImage" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="130dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_start_style"
+        android:fontFamily="@font/amatic_sc_bold"
+        android:letterSpacing="0.1"
+        android:text="W  drogę!"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backgroundWave"
+        app:layout_constraintVertical_bias="0.756" />
+
+    <Button
+        android:id="@+id/btnInfo"
+        android:layout_width="60dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_start_style"
+        android:fontFamily="@font/amatic_sc_bold"
+        android:letterSpacing="0.05"
+        android:text="Co to?"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStart" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="68dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="2sp"
+        android:text="Twój niezbędnik wiedzy\n o najwyższych szczytach polskich\n pasm górskich"
+        android:textAlignment="center"
+        android:textColor="#B1B1B1"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

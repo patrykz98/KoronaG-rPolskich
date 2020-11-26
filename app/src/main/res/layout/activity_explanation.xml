@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExplanationActivity">
+
+
+    <ImageView
+        android:id="@+id/ivMainImage"
+        android:alpha="0.1"
+        android:layout_width="212dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mountain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backgroundWave"
+        android:layout_width="506dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="364dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wave_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:alpha="0.2"/>
+
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="373dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:letterSpacing="0.1"
+        android:lineSpacingExtra="2sp"
+        android:text="Korona Gór Polski to 28 szczytów wszystkich pasm górskich w Polsce. Są to przeważnie najwyższe szczyty w danym paśmie. Czemu przeważnie? Ponieważ kilka szczytów, które widnieją na liście, nie jest najwyższym wzniesieniem w swoich górach."
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="191dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:letterSpacing="0.15"
+        android:lineSpacingExtra="3sp"
+        android:text="Rysy \nBabia Góra \nŚnieżka \nŚnieżnik \nTarnica \nTurbacz \nRadziejowa \nSkrzyczne
+        \nMogielica \nWysoka Kopa \nRudawiec \nOrlica \nWysoka \nWielka Sowa \nLackowa \nKowadło \nJagodna
+        \nSkalnik \nWaligóra \nCzupel \nSzczeliniec Wieklki \nLubomir \nBiskupia Kopa \nChełmiec \nKłodzka Góra
+        \nSkopiec \nŚlęża \nŁysica"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInfo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
