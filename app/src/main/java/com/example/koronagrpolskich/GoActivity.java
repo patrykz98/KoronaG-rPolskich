@@ -11,7 +11,7 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 public class GoActivity extends AppCompatActivity {
 
-    CardView cvDetails;
+    CardView cvDetails, cvMaps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +19,20 @@ public class GoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_go);
 
         cvDetails = findViewById(R.id.cvDetails);
+        cvMaps = findViewById(R.id.cvMaps);
 
         cvDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(GoActivity.this, DetailsActivity.class));
+                Animatoo.animateFade(GoActivity.this);
+            }
+        });
+
+        cvMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GoActivity.this, MapsActivity.class));
                 Animatoo.animateFade(GoActivity.this);
             }
         });
