@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -30,6 +31,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .title("Mogielica")
                 .snippet("1170")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(49.17977, 20.08803))
+                .title("Rysy")
+                .snippet("2503")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
         );
         markerList.add(new MarkerOptions()
                 .position(new LatLng(49.57396902136253, 19.530882200778183))
@@ -103,6 +110,92 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .snippet("1015")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE))
         );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(49.427135501248785, 21.1025899486808))
+                .title("Lackowa")
+                .snippet("997")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(50.264200262507366, 17.01388046247619))
+                .title("Kowadło")
+                .snippet("989")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(50.25288636944188, 16.564949988198798))
+                .title("Jagodna")
+                .snippet("977")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(50.80864899280983, 15.899964049444382))
+                .title("Skalnik")
+                .snippet("945")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(50.680939713981175, 16.27810472345634))
+                .title("Waligóra")
+                .snippet("936")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(49.766327681478245, 19.1552050631697))
+                .title("Czupel")
+                .snippet("934")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(50.48426517108458, 16.343203891162712))
+                .title("Szczeliniec Wielki")
+                .snippet("919")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(49.76708136073559, 20.05958178637773))
+                .title("Lubomir")
+                .snippet("912")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(50.257259696317895, 17.42868197219536))
+                .title("Biskupia Kopia")
+                .snippet("889")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(50.78045365290661, 16.211987552567702))
+                .title("Chełmiec")
+                .snippet("869")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(50.45227979770458, 16.753640878394627))
+                .title("Kłodzka Góra")
+                .snippet("765")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(50.944094285290184, 15.88468003774538))
+                .title("Skopiec")
+                .snippet("724")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(50.865048228394336, 16.708609841657445))
+                .title("Ślęża")
+                .snippet("718")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
+        );
+        markerList.add(new MarkerOptions()
+                .position(new LatLng(50.89211685609258, 20.89652729828751))
+                .title("Łysica")
+                .snippet("612")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW))
+        );
+
+
 
 
     }
@@ -148,6 +241,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateFade(this);
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button2:
@@ -155,7 +254,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 for (MarkerOptions m : markerList) {
                     mMap.addMarker(m);
                 }
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(49.17977, 20.08803), 8.0f));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(49.17977, 20.08803), 6.0f));
                 break;
             case R.id.radioButton1:
                 if (((RadioButton) findViewById(R.id.radioButton1)).isChecked()) {

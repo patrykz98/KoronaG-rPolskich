@@ -11,7 +11,7 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 public class GoActivity extends AppCompatActivity {
 
-    CardView cvDetails, cvMaps;
+    CardView cvDetails, cvMaps, cvWeather, cvAchievement, cvCalendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,9 @@ public class GoActivity extends AppCompatActivity {
 
         cvDetails = findViewById(R.id.cvDetails);
         cvMaps = findViewById(R.id.cvMaps);
+        cvWeather = findViewById(R.id.cvWeather);
+        cvAchievement = findViewById(R.id.cvAchievement);
+        cvCalendar = findViewById(R.id.cvCalendar);
 
         cvDetails.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +36,28 @@ public class GoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(GoActivity.this, MapsActivity.class));
+                Animatoo.animateFade(GoActivity.this);
+            }
+        });
+
+        cvWeather.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GoActivity.this, WeatherActivity.class));
+                Animatoo.animateFade(GoActivity.this);
+            }
+        });
+        cvAchievement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GoActivity.this, AchievementActivity.class));
+                Animatoo.animateFade(GoActivity.this);
+            }
+        });
+        cvCalendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GoActivity.this, CalendarActivity.class));
                 Animatoo.animateFade(GoActivity.this);
             }
         });
